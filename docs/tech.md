@@ -21,6 +21,7 @@
 - PrimeReact
 - Vite
 - Tailwind CSS
+- pnpm (Monorepo management)
 - Docker
 - GitHub Actions for CI/CD
 - Husky for Git hooks
@@ -40,6 +41,7 @@
 - ESLint and Prettier for code quality and formatting
 - Husky and lint-staged for pre-commit hooks
 - Commitlint for commit message conventions — Commitizen (with JIRA adapter)
+- validate-branch-name for branch naming conventions
 - Storybook for UI component development and documentation
 - i18next for internationalization and localization
 - GraphQL (Apollo Server and Client) for flexible data querying
