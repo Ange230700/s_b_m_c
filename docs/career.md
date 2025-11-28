@@ -1,6 +1,6 @@
 <!-- docs\career.md -->
 
-# Career Opportunities at Solange Bernard Platform
+# Career Opportunities at Solange Bernard
 
 * Implement a talent acquisition feature within the platform
 * Train people in career transition or youth entering the field
