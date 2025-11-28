@@ -1,0 +1,51 @@
+<!-- docs\tech.md -->
+
+# Technology Stack for Solange Bernard Platform
+
+- Mermaid for diagrams and flowcharts
+- DrawSQL for database schema design
+- Figma for UI/UX design and prototyping
+- Visual Studio Code as the primary code editor
+- Git for version control
+- GitHub for code hosting and collaboration
+- Agile methodologies for project management
+- JIRA for project management and issue tracking
+- TypeScript
+- JSDoc for code documentation
+- Node.js
+- Express.js
+- PostgreSQL
+- MongoDB
+- Prisma ORM
+- React
+- PrimeReact
+- Vite
+- Tailwind CSS
+- Docker
+- GitHub Actions for CI/CD
+- Husky for Git hooks
+- AWS (EC2, S3, RDS)
+- Stripe for payment processing
+- Expo for mobile app development
+- React Native
+- Zustand for state management
+- React Query for data fetching and caching
+- Socket.io for real-time features
+- Vitest and React Testing Library for testing
+- Supertest for API testing
+- Postman for API development and testing
+- Playwright for end-to-end testing
+- Sentry for error tracking and monitoring
+- Swagger for API documentation
+- ESLint and Prettier for code quality and formatting
+- Husky and lint-staged for pre-commit hooks
+- Commitlint for commit message conventions — Commitizen (with JIRA adapter)
+- Storybook for UI component development and documentation
+- i18next for internationalization and localization
+- GraphQL (Apollo Server and Client) for flexible data querying
+- Redis for caching and session management
+- Vercel for frontend deployment
+- Render for backend deployment
+- Cloudflare for CDN and security
+- AlwaysData for database hosting and management
+- Electron for desktop application development
