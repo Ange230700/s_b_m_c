@@ -1,0 +1,10 @@
+%% docs\mvp\diagrams\customer_flow.mmd
+
+flowchart TD
+    A[Browse RTW Catalog] --> B[Select Product]
+    B --> C[Choose Size]
+    C --> D[Check Availability]
+    D -->|In Stock| E[Fill Order Form]
+    D -->|Out of Stock| X[Show 'Unavailable']
+    E --> F[Confirm Order]
+    F --> G[Order Created Pending]
