@@ -1,0 +1,61 @@
+%% docs\mvp\diagrams\api_call.mmd
+
+sequenceDiagram
+    autonumber
+
+    participant C as Customer
+    participant UI as Web App (RTW Frontend)
+    participant API as RTW API Backend
+    participant INV as Inventory Logic
+    participant ORD as Order Logic
+    participant DB as Database
+
+    %% 1. Browse Catalog
+    C->>UI: Open RTW catalog page
+    UI->>API: GET /products
+    API->>DB: SELECT * FROM products WHERE is_published = true
+    DB-->>API: Product list
+    API-->>UI: 200 OK + product list (JSON)
+    UI-->>C: Render product grid
+
+    %% 2. View Product Detail
+    C->>UI: Click on product
+    UI->>API: GET /products/{productId}
+    API->>DB: SELECT * FROM products WHERE id = {productId}
+    DB-->>API: Product + size/stock data
+    API-->>UI: 200 OK + product detail
+    UI-->>C: Show product, sizes, availability
+
+    %% 3. Place Order
+    C->>UI: Fill order form (name, phone, address, size)
+    C->>UI: Click "Confirm Order"
+    UI->>API: POST /orders {productId, size, customerInfo}
+
+    %% 3.1 Validate request & stock
+    API->>ORD: Validate order payload
+    ORD-->>API: OK or validation error
+    API->>INV: Check and reserve stock (productId, size)
+    INV->>DB: SELECT quantity FROM stock WHERE productId & size
+    DB-->>INV: Current quantity
+    INV-->>API: StockAvailable / OutOfStock
+
+    alt StockAvailable
+        %% 3.2 Create order + order item
+        API->>ORD: Create order
+        ORD->>DB: INSERT INTO orders (...)
+        DB-->>ORD: New orderId
+
+        ORD->>DB: INSERT INTO order_items (orderId, productId, size, qty)
+        DB-->>ORD: Order item created
+
+        %% 3.3 Decrement stock
+        INV->>DB: UPDATE stock SET quantity = quantity - 1
+        DB-->>INV: Stock updated
+
+        %% 3.4 Respond to client
+        API-->>UI: 201 Created + order summary
+        UI-->>C: Show confirmation screen (order reference)
+    else OutOfStock
+        API-->>UI: 409 Conflict + "Out of stock"
+        UI-->>C: Show error message / choose another size
+    end
