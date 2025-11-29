@@ -1,0 +1,100 @@
+%% docs\mvp\diagrams\domain-erd.mmd
+
+erDiagram
+    %% =========================
+    %% CATALOG CONTEXT
+    %% =========================
+    Product ||--o{ ProductVariant : has
+    Product ||--o{ ProductImage : has
+
+    Product {
+        string id
+        string name
+        string slug
+        string description
+        float  price
+        boolean isPublished
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    ProductVariant {
+        string id
+        string productId
+        string size
+        string color
+        string sku
+    }
+
+    ProductImage {
+        string id
+        string productId
+        string url
+        string altText
+        int    position
+    }
+
+    %% =========================
+    %% INVENTORY CONTEXT
+    %% =========================
+    ProductVariant ||--|| StockItem : tracked_by
+
+    StockItem {
+        string id
+        string productVariantId
+        int    quantity
+        int    safetyStock
+        datetime updatedAt
+    }
+
+    %% =========================
+    %% ORDERS / SALES CONTEXT
+    %% =========================
+    Order ||--o{ OrderItem : contains
+    Order ||--o| DeliveryInfo : has
+
+    Order {
+        string id
+        string status
+        string customerName
+        string customerPhone
+        string customerAddress
+        string paymentMethod
+        string paymentStatus
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    OrderItem {
+        string id
+        string orderId
+        string productId
+        string productVariantId
+        float  unitPrice
+        int    quantity
+    }
+
+    DeliveryInfo {
+        string id
+        string orderId
+        string deliveryStatus
+        datetime plannedDate
+        datetime actualDate
+        string notes
+    }
+
+    %% =========================
+    %% AUTH / ADMIN CONTEXT
+    %% =========================
+    AdminUser ||--o{ Product : created
+    AdminUser ||--o{ Order : managed
+
+    AdminUser {
+        string id
+        string name
+        string email
+        string passwordHash
+        string role
+        datetime createdAt
+        datetime updatedAt
+    }
