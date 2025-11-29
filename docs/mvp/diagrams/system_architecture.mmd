@@ -1,0 +1,48 @@
+%% docs\mvp\diagrams\system_architecture.md
+
+flowchart LR
+
+    %% CLIENTS
+    subgraph Clients
+        CUST["Public Web App (RTW)"]
+        ADMIN["Admin Dashboard"]
+    end
+
+    %% API GATEWAY / BFF
+    GW["API Gateway / BFF<br/>rtw-api-gateway"]
+
+    CUST --> GW
+    ADMIN --> GW
+
+    %% CORE MICROSERVICES
+    subgraph Catalog["Catalog Service<br/>rtw-catalog-service"]
+        CAT_API[(HTTP API)]
+        CAT_DB[(Catalog DB)]
+    end
+
+    subgraph Orders["Orders Service<br/>rtw-orders-service"]
+        ORD_API[(HTTP API)]
+        ORD_DB[(Orders DB)]
+    end
+
+    subgraph Inventory["Inventory Service<br/>rtw-inventory-service"]
+        INV_API[(HTTP API)]
+        INV_DB[(Inventory DB)]
+    end
+
+    subgraph Auth["Auth / Admin Service<br/>rtw-auth-service"]
+        AUTH_API[(HTTP API)]
+        AUTH_DB[(Auth DB)]
+    end
+
+    %% ROUTING
+    GW --> CAT_API
+    GW --> ORD_API
+    GW --> INV_API
+    GW --> AUTH_API
+
+    %% DATA OWNERSHIP
+    CAT_API --> CAT_DB
+    ORD_API --> ORD_DB
+    INV_API --> INV_DB
+    AUTH_API --> AUTH_DB
