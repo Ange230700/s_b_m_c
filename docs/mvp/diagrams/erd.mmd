@@ -1,0 +1,43 @@
+%% docs\mvp\diagrams\erd.mmd
+erDiagram
+    Product ||--o{ StockUnit : has
+    Product ||--o{ OrderItem : contains
+    Order ||--o{ OrderItem : includes
+    AdminUser ||--o{ Product : created
+    AdminUser ||--o{ Order : managed
+
+    Product {
+        string id
+        string name
+        string description
+        float price
+    }
+
+    StockUnit {
+        string id
+        string productId
+        string size
+        int quantity
+    }
+
+    Order {
+        string id
+        string customerName
+        string phone
+        string address
+        string status
+    }
+
+    OrderItem {
+        string id
+        string orderId
+        string productId
+        string size
+        int quantity
+    }
+
+    AdminUser {
+        string id
+        string email
+        string password
+    }
