@@ -1,18 +1,18 @@
-%% docs\mvp\diagrams\ecommerce_domain_model.mmd
+%% docs\mvp\diagrams\erd.mmd
 
 erDiagram
     %% =========================
     %% CATALOG CONTEXT
     %% =========================
     Product ||--o{ ProductVariant : has
-    Product ||--o{ ProductImage : has
+    Product ||--o{ ProductImage  : has
 
     Product {
-        string id
-        string name
-        string slug
-        string description
-        float  price
+        string  id
+        string  name
+        string  slug
+        string  description
+        float   price
         boolean isPublished
         datetime createdAt
         datetime updatedAt
@@ -40,27 +40,27 @@ erDiagram
     ProductVariant ||--|| StockItem : tracked_by
 
     StockItem {
-        string id
-        string productVariantId
-        int    quantity
-        int    safetyStock
+        string  id
+        string  productVariantId
+        int     quantity
+        int     safetyStock
         datetime updatedAt
     }
 
     %% =========================
     %% ORDERS / SALES CONTEXT
     %% =========================
-    Order ||--o{ OrderItem : contains
+    Order ||--o{ OrderItem    : contains
     Order ||--o| DeliveryInfo : has
 
     Order {
-        string id
-        string status
-        string customerName
-        string customerPhone
-        string customerAddress
-        string paymentMethod
-        string paymentStatus
+        string  id
+        string  status           "Pending | Confirmed | OutForDelivery | Delivered | Cancelled"
+        string  customerName
+        string  customerPhone
+        string  customerAddress
+        string  paymentMethod    "e.g. cash_on_delivery"
+        string  paymentStatus    "e.g. pending | paid"
         datetime createdAt
         datetime updatedAt
     }
@@ -75,26 +75,26 @@ erDiagram
     }
 
     DeliveryInfo {
-        string id
-        string orderId
-        string deliveryStatus
+        string  id
+        string  orderId
+        string  deliveryStatus   "mirrors/shadows order status or adds sub-status"
         datetime plannedDate
         datetime actualDate
-        string notes
+        string  notes
     }
 
     %% =========================
     %% AUTH / ADMIN CONTEXT
     %% =========================
     AdminUser ||--o{ Product : created
-    AdminUser ||--o{ Order : managed
+    AdminUser ||--o{ Order   : managed
 
     AdminUser {
-        string id
-        string name
-        string email
-        string passwordHash
-        string role
+        string  id
+        string  name
+        string  email
+        string  passwordHash
+        string  role            "e.g. admin"
         datetime createdAt
         datetime updatedAt
     }
