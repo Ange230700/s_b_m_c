@@ -1,0 +1,47 @@
+%% docs\mvp\diagrams\order-state-model.mmd
+stateDiagram-v2
+    [*] --> Pending: placeOrder() [stockAvailable]
+
+    %% Core lifecycle
+    Pending --> Confirmed: confirmOrder()
+    Confirmed --> OutForDelivery: startDelivery()
+    OutForDelivery --> Delivered: markDelivered()
+
+    %% Cancellation paths
+    Pending --> Cancelled: cancelOrder()
+    Confirmed --> Cancelled: cancelOrder()
+    OutForDelivery --> Cancelled: cancelDelivery()
+
+    %% Terminal states
+    Delivered --> [*]
+    Cancelled --> [*]
+
+    %% Notes on stock behaviour (policy)
+    note right of Pending
+        - Stock has been RESERVED by decrementing available quantity
+        - If cancelled here: STOCK IS RESTORED
+    end note
+
+    note right of Confirmed
+        - Stock already reserved (no further change)
+        - Ready for packing / preparation
+        - If cancelled here: STOCK IS RESTORED
+    end note
+
+    note right of OutForDelivery
+        - Items physically left the atelier
+        - No stock changes on transition
+        - If cancelled here: STOCK IS NOT RESTORED
+    end note
+
+    note right of Delivered
+        - Final state, sale completed
+        - No stock changes allowed
+    end note
+
+    note right of Cancelled
+        - Final state
+        - Stock restoration depends on previous state:
+          * From Pending/Confirmed: RESTOCK
+          * From OutForDelivery: NO RESTOCK
+    end note
