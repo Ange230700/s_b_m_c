@@ -17,6 +17,9 @@ It centralizes and elevates every operational, creative, and commercial workflow
 The mission is simple:
 **Empower couture ateliers to deliver excellence, streamline their workflow, and grow sustainably.**
 
+📚 **Documentation**
+See more in [`/docs`](./docs).
+
 ---
 
 # Workflow of a Couture Atelier
