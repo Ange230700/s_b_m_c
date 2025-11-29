@@ -1,0 +1,10 @@
+%% docs\mvp\diagrams\admin_journey.mmd
+
+flowchart TD
+    L[Admin Login] --> A[Add Product]
+    A --> B[Add Stock Per Size]
+    B --> C[Receive Orders]
+    C --> D[Confirm Order]
+    D --> E[Prepare Delivery]
+    E --> F[Mark as Out for Delivery]
+    F --> G[Mark as Delivered]
