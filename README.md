@@ -250,6 +250,9 @@ Only **five** core entities:
 
 > **This is the single source of truth for all RTW MVP Zero data.**
 
+<details>
+<summary>📦 Click to expand ERD diagram</summary>
+
 ```mermaid
 erDiagram
     %% =========================
@@ -351,6 +354,8 @@ erDiagram
     }
 ````
 
+</details>
+
 **How to read it:**
 
 * **Catalog**: `Product` → `ProductVariant` → `ProductImage`
@@ -364,6 +369,9 @@ erDiagram
 
 > **One state machine for the whole platform.**
 > Frontend, backend, admin UI and reports all share this same definition.
+
+<details>
+<summary>🔄 Click to expand lifecycle diagram</summary>
 
 ```mermaid
 stateDiagram-v2
@@ -412,6 +420,8 @@ stateDiagram-v2
     end note
 ```
 
+</details>
+
 This gives you **deterministic transitions** and clean APIs like:
 
 * `POST /orders/:id/confirm`
@@ -424,6 +434,9 @@ This gives you **deterministic transitions** and clean APIs like:
 
 > **How a client interacts with the system from the public site.**
 
+<details>
+<summary>🧍 Click to expand customer flow diagram</summary>
+
 ```mermaid
 flowchart TD
     A[Browse RTW Catalog] --> B[Select Product]
@@ -435,6 +448,8 @@ flowchart TD
     F --> G[Order Created Pending]
 ```
 
+</details>
+
 * Minimal friction, single product + single size per order (MVP).
 * Directly creates an `Order` in `Pending` state → feeds into the **order lifecycle**.
 
@@ -443,6 +458,9 @@ flowchart TD
 ## 8. System Architecture (Microservices + Gateway)
 
 > **How everything is wired together behind the scenes.**
+
+<details>
+<summary>🏗️ Click to expand architecture diagram</summary>
 
 ```mermaid
 flowchart LR
@@ -493,6 +511,8 @@ flowchart LR
     AUTH_API --> AUTH_DB
 ```
 
+</details>
+
 **Key ideas:**
 
 * Each microservice owns its own database (**no shared DB**).
@@ -507,6 +527,9 @@ flowchart LR
 ## 9. Frontend Architecture (React App Structure)
 
 > **How the UI is structured into public and admin areas.**
+
+<details>
+<summary>🖥️ Click to expand frontend architecture diagram</summary>
 
 ```mermaid
 flowchart TD
@@ -552,6 +575,8 @@ flowchart TD
     App --> ThemeProvider[ThemeProvider]
     App --> ToastProvider[ToastProvider]
 ```
+
+</details>
 
 * **Public Area** → Customer catalog + order flow
 * **Admin Area** → Product, stock, and order management
@@ -863,3 +888,49 @@ v1.2.4
 ```
 
 Initial development is in **0.x**, where rapid changes are expected.
+
+---
+
+## 📘 Glossary (Domain Terms)
+
+**Atelier** — A couture workshop where garments are custom-made or produced.
+**RTW (Ready-to-Wear)** — A line of pre-made clothing available for purchase off-the-rack.
+**Sur-mesure** — Custom-made clothing tailored specifically to each client.
+**Variant** — A product option combining size and color.
+**StockItem** — Quantity tracking for a specific product variant.
+**QC (Quality Control)** — Final inspection of a garment before delivery.
+**Task Pipeline** — Production flow (cutting → sewing → QC).
+**BFF (Backend for Frontend)** — An API Gateway layer optimized for the UI.
+**Admin User** — Internal atelier staff with authenticated access.
+
+> The glossary grows naturally as we introduce more atelier concepts.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**:
+
+```text
+MIT License
+
+Copyright (c) 2025 V∅ID Labs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
