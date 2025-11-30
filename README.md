@@ -713,3 +713,69 @@ This single README gives the **big picture**:
 * **Execution** → Tech stack, design directory, engineering practices, success metrics
 
 Anyone joining the project (business or technical) should be able to read this file and **understand how the RTW platform and the broader atelier system fit together** from A to Z.
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Ange230700/s_b_m_c.git
+cd s_b_m_c
+```
+
+### 2. Install dependencies
+```bash
+pnpm install
+```
+
+### 3. Set up environment variables
+Each microservice contains a `.env.example` file. Duplicate them:
+
+```bash
+cp services/*/.env.example services/*/.env
+```
+
+(Later, we'll add a script to automate this.)
+
+### 4. Run the entire platform in dev mode
+```bash
+pnpm dev
+```
+
+### 5. Run tests
+```bash
+pnpm test
+```
+
+---
+
+## 📦 Repository Structure (Monorepo Overview)
+
+```txt
+s_b_m_c/
+├── apps/
+│   ├── public-web/          # Public React app for customers
+│   └── admin-dashboard/     # Atelier internal admin React app
+│
+├── services/
+│   ├── rtw-catalog/        # Product catalog & images
+│   ├── rtw-orders/         # Order management & lifecycle
+│   ├── rtw-inventory/      # Stock tracking
+│   ├── rtw-auth/           # Authentication & admin users
+│   └── rtw-api-gateway/    # API Gateway / BFF
+│
+├── docs/                   # Documentation & diagrams
+│   ├── inspirations/       # Moodboards & references
+│   ├── ux-flows/           # User experience flow diagrams
+│   ├── wireframes/         # Low-fidelity design sketches
+│   ├── mockups/            # High-fidelity design mockups
+│   └── style-guide/        # Design system and style guidelines
+│
+├── scripts/                # Automation scripts (DB, assets, etc.)
+├── configs/                # Shared TS/ESLint/Prettier configs
+├── .github/                # GitHub workflows
+├── package.json            # Monorepo root package.json
+├── pnpm-workspace.yaml     # Monorepo definition
+└── README.md               # This file
+```
+
+> This structure reflects a clean microservices + apps monorepo using **pnpm**, designed for scale, modularity, and team onboarding.
