@@ -757,25 +757,109 @@ s_b_m_c/
 │   └── admin-dashboard/     # Atelier internal admin React app
 │
 ├── services/
-│   ├── rtw-catalog/        # Product catalog & images
-│   ├── rtw-orders/         # Order management & lifecycle
-│   ├── rtw-inventory/      # Stock tracking
-│   ├── rtw-auth/           # Authentication & admin users
-│   └── rtw-api-gateway/    # API Gateway / BFF
+│   ├── rtw-catalog/         # Product catalog & images
+│   ├── rtw-orders/          # Order management & lifecycle
+│   ├── rtw-inventory/       # Stock tracking
+│   ├── rtw-auth/            # Authentication & admin users
+│   └── rtw-api-gateway/     # API Gateway / BFF
 │
-├── docs/                   # Documentation & diagrams
-│   ├── inspirations/       # Moodboards & references
-│   ├── ux-flows/           # User experience flow diagrams
-│   ├── wireframes/         # Low-fidelity design sketches
-│   ├── mockups/            # High-fidelity design mockups
-│   └── style-guide/        # Design system and style guidelines
+├── docs/                    # Documentation & diagrams
+│   ├── inspirations/        # Moodboards & references
+│   ├── ux-flows/            # User experience flow diagrams
+│   ├── wireframes/          # Low-fidelity design sketches
+│   ├── mockups/             # High-fidelity design mockups
+│   └── style-guide/         # Design system and style guidelines
 │
-├── scripts/                # Automation scripts (DB, assets, etc.)
-├── configs/                # Shared TS/ESLint/Prettier configs
-├── .github/                # GitHub workflows
-├── package.json            # Monorepo root package.json
-├── pnpm-workspace.yaml     # Monorepo definition
-└── README.md               # This file
+├── scripts/                 # Automation scripts (DB, assets, etc.)
+├── configs/                 # Shared TS/ESLint/Prettier configs
+├── .github/                 # GitHub workflows
+├── package.json             # Monorepo root package.json
+├── pnpm-workspace.yaml      # Monorepo definition
+└── README.md                # This file
 ```
 
 > This structure reflects a clean microservices + apps monorepo using **pnpm**, designed for scale, modularity, and team onboarding.
+
+---
+
+## 🤝 Contributing
+
+### Branching Strategy
+- Use feature branches:
+   - `feature/your-feature-name`
+   - `fix/bug-description`
+   - `chore/task-description`
+   - `docs/update-description`
+
+### Commit Messages
+- Follow Conventional Commits:
+   - `feat: add product variant CRUD`
+   - `fix: correct stock decrement logic`
+   - `refactor: clean order service handlers`
+   - `docs: update ERD for variant images`
+
+### Pull Requests Requirements
+- Code must pass all tests (`pnpm test`)
+- Include diagrams (Mermaid) for domain-impacting changes
+- Update documentation if behaviour or data model changes
+- Use clear titles & descriptions
+
+### Testing Standards
+- **Vitest** for unit tests
+- **React Testing Library** for frontend components
+- **Supertest** for API endpoints
+- **Playwright** for end-to-end (later phase)
+
+> The goal: maintain high standards and make the codebase predictable, scalable, and easy to onboard into.
+
+---
+
+## 🗺️ Roadmap (High-Level Milestones)
+
+- **RTW MVP Zero**
+   - Product catalog
+   - Stock management
+   - Order placement & lifecycle
+   - Simple delivery
+   - Basic admin auth
+
+- **Atelier Operations MVP**
+   - Measurement tracking
+   - Model validation
+   - Production pipeline (cutting → sewing → QC)
+
+- **Client Experience Layer**
+   - Customer portal
+   - Notifications
+   - Order tracking (client-facing)
+
+- **Inventory & Fabric Management**
+   - Fabric & materials tracking
+   - Stock alerts
+   - Supplier tracking
+
+- **Advanced SaaS Layer (Powered by V∅ID Labs)**
+   - Multi-tenant architecture
+   - Analytics dashboard
+   - AI-powered recommendations
+   - Marketplace integration
+
+---
+
+## 🏷️ Versioning
+
+This project will follow **Semantic Versioning (SemVer)**:
+
+- **MAJOR**: Breaking changes / architectural shifts
+- **MINOR**: New features / non-breaking enhancements
+- **PATCH**: Bug fixes / minor improvements
+
+Example:
+```
+v1.2.4
+└─ 1 → major
+   └─ 2 → minor
+      └─ 4 → patch
+```
+
+Initial development is in **0.x**, where rapid changes are expected.
