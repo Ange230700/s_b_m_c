@@ -2,17 +2,46 @@
 
 # 🧵 **Solange Bernard — Maison de Couture**
 
+<!-- Header Illustration / Banner -->
+<p align="center">
+   <img src="./docs/mockups/banner.png" alt="Solange Bernard Maison de Couture Banner" width="820" />
+</p>
+
+<!-- Project Badges -->
+<p align="center">
+   <span role="group" aria-label="Centered horizontal row of project technology badges in the README; subjects are static shields.io badges showing the tech stack; wider environment is a clean, minimal header area beneath the project title; tone is modern and professional. From left to right, the badges read TypeScript 5, React 18, Node.js 20, pnpm monorepo, Powered by V∅ID Labs.">
+      <img src="https://img.shields.io/badge/TypeScript-5-blue" alt="TypeScript 5 badge" />
+      <img src="https://img.shields.io/badge/React-18-61dafb" alt="React 18 badge" />
+      <img src="https://img.shields.io/badge/Node.js-20-green" alt="Node.js 20 badge" />
+      <img src="https://img.shields.io/badge/pnpm-monorepo-yellow" alt="pnpm monorepo badge" />
+      <img src="https://img.shields.io/badge/Powered_by-V%E2%88%85ID_Labs-black" alt="Powered by V∅ID Labs badge" />
+   </span>
+</p>
+
+## Preview
+
+> These preview images help newcomers visualize the coming RTW experience.
+
+<p align="center">
+   <img src="./docs/mockups/catalog-preview.png" alt="Catalog Mockup" width="420" />
+   <img src="./docs/mockups/product-preview.png" alt="Product Page Mockup" width="420" />
+</p>
+
+<p align="center">
+   <img src="./docs/mockups/admin-dashboard-preview.png" alt="Admin Dashboard Mockup" width="820" />
+</p>
+
 A modern **all-in-one SaaS** built from the ground up for couture ateliers.
 
 It centralizes and elevates every operational, creative, and commercial workflow:
 
-- client reception & measurement tracking  
-- model selection & creative validation  
-- production planning & team coordination  
-- appointments & delivery schedule  
-- inventory & materials management  
-- revenue, expenses & insights  
-- marketing & client engagement automation  
+- client reception & measurement tracking
+- model selection & creative validation
+- production planning & team coordination
+- appointments & delivery schedule
+- inventory & materials management
+- revenue, expenses & insights
+- marketing & client engagement automation
 
 > **Mission**  
 > Empower couture ateliers to deliver excellence, streamline their workflow, and grow sustainably — without ever compromising artistry.
@@ -47,60 +76,68 @@ It centralizes and elevates every operational, creative, and commercial workflow
 ### 1.1 Real-World Atelier Workflow
 
 1. **Client Reception & Measurement**
-   - Understand client’s expectations and vision  
-   - Take detailed measurements  
+
+   - Understand client’s expectations and vision
+   - Take detailed measurements
    - Record notes, fabrics, inspirations
 
 2. **Model Selection & Design Validation**
-   - Client chooses model  
-   - Designer provides sketch or proposal  
-   - Approvals + revisions captured digitally  
+
+   - Client chooses model
+   - Designer provides sketch or proposal
+   - Approvals + revisions captured digitally
    - Delivery appointment is planned
 
 3. **Production Planning & Tracking**
-   - Internal calendar planning  
-   - Task assignments by role  
-   - Deadlines per stage (cutting → sewing → QC)  
+
+   - Internal calendar planning
+   - Task assignments by role
+   - Deadlines per stage (cutting → sewing → QC)
    - Real-time progress status
 
 4. **Appointments & Delivery**
-   - Fittings  
-   - Mid-stage adjustments  
+
+   - Fittings
+   - Mid-stage adjustments
    - Final delivery
 
 5. **Production Pipeline**
-   - Cutting  
-   - Sewing  
+
+   - Cutting
+   - Sewing
    - QC preparation
 
 6. **Quality Control**
-   - Verify conformity to model  
-   - Measurement accuracy  
-   - Finishing / stitching check  
+   - Verify conformity to model
+   - Measurement accuracy
+   - Finishing / stitching check
    - Photo reference & issue flags
 
 ### 1.2 Roles Inside Solange Bernard’s Atelier
 
 - **Receptionist / Manager**
-  - Welcome clients, take measurements  
-  - Manage appointments & client files  
-  - Communicate with production team  
+
+  - Welcome clients, take measurements
+  - Manage appointments & client files
+  - Communicate with production team
   - Handle follow-ups
 
 - **Cutter**
-  - Interpret patterns & sketches  
-  - Cut fabric accurately  
+
+  - Interpret patterns & sketches
+  - Cut fabric accurately
   - Collaborate with designers & seamstresses
 
 - **Seamstress / Tailor**
-  - Sew according to specs  
-  - Perform fittings & adjustments  
+
+  - Sew according to specs
+  - Perform fittings & adjustments
   - Ensure finishing quality
 
 - **Quality Control Specialist (to introduce)**
-  - Inspect finished garments  
-  - Validate against design & measurements  
-  - Document issues  
+  - Inspect finished garments
+  - Validate against design & measurements
+  - Document issues
   - Tag garments: **Ready / Needs Fix / Reject**
 
 These real roles shape the **domain model, flows, and UI** of the platform.
@@ -112,38 +149,42 @@ These real roles shape the **domain model, flows, and UI** of the platform.
 ### 2.1 Business & Operations
 
 1. **Sur-mesure is draining and not profitable enough**
-   - Huge time investment per client  
-   - Physically exhausting  
+
+   - Huge time investment per client
+   - Physically exhausting
    - Margins too low
 
 2. **No visibility or marketing**
-   - No real online presence or strategy  
+
+   - No real online presence or strategy
    - Word-of-mouth only
 
 3. **Information chaos**
-   - Paper measurement sheets  
-   - No centralized system  
-   - Progress not tracked  
-   - Missed appointments  
+
+   - Paper measurement sheets
+   - No centralized system
+   - Progress not tracked
+   - Missed appointments
    - Scattered info everywhere
 
 4. **Quality control issues**
-   - Measurement errors  
-   - Model deviations  
+
+   - Measurement errors
+   - Model deviations
    - Stitching problems
 
 5. **Productivity & motivation**
-   - No performance tracking  
-   - No incentives  
+   - No performance tracking
+   - No incentives
    - No KPIs
 
 ### 2.2 Strategic Product Objectives
 
-1. **Unify all atelier operations** into one central platform  
-2. **Eliminate mistakes** (measurements, deadlines, design misalignment)  
-3. **Increase productivity** through structured workflows  
-4. **Standardize excellence** across all ateliers using the platform  
-5. **Create a premium digital client experience**  
+1. **Unify all atelier operations** into one central platform
+2. **Eliminate mistakes** (measurements, deadlines, design misalignment)
+3. **Increase productivity** through structured workflows
+4. **Standardize excellence** across all ateliers using the platform
+5. **Create a premium digital client experience**
 6. **Arm the atelier with data** (production, finances, workload, sales)
 
 ### 2.3 Personas (Who We’re Building For)
@@ -153,6 +194,7 @@ These real roles shape the **domain model, flows, and UI** of the platform.
 **Name:** Solange
 **Role:** Owner / Manager / Reception Lead
 **Goals:**
+
 - Keep the atelier organized
 - Track client files, measurements, and deadlines
 - Minimize errors and rework
@@ -160,6 +202,7 @@ These real roles shape the **domain model, flows, and UI** of the platform.
 - Keep the team productive and aligned
 
 **Pain Points:**
+
 - Everything is on paper
 - Information gets lost
 - Staff forget deadlines
@@ -167,6 +210,7 @@ These real roles shape the **domain model, flows, and UI** of the platform.
 - Difficult to track sales, performance, inventory
 
 **How the product helps:**
+
 - Centralized dashboard for all operations
 - Automatic reminders & workflow tracking
 - Real-time visibility on production
@@ -176,33 +220,40 @@ These real roles shape the **domain model, flows, and UI** of the platform.
 
 **Role:** Produces garments (cutting, sewing, finishing)
 **Goals:**
+
 - Receive clear tasks
 - Understand model details & measurements
 - Avoid back-and-forth with the receptionist
 
 **Pain Points:**
+
 - Missing measurements
 - Wrong model references
 - Not knowing task priority
 
 **How the product helps:**
+
 - Clear production pipeline
 - Access to measurements & model details
 - QC feedback loop to improve quality
 
 #### **Persona C — The Client (RTW and Sur-Mesure)**
+
 **Role:** Customer buying RTW or custom clothes
 **Goals:**
+
 - Buy beautiful garments
 - Get reliable delivery
 - Have a professional experience
 
 **Pain Points:**
+
 - No online catalog
 - Hard to know availability
 - No clear appointment communication
 
 **How the product helps:**
+
 - Easy RTW ordering
 - Clean product catalog
 - Transparent delivery process
@@ -218,7 +269,9 @@ RTW products generate fast cash flow — critical for an atelier needing stabili
 Sur-mesure is slow, complex, and less scalable.
 
 #### **2. Smaller Scope → Faster Launch**
+
 RTW requires fewer workflows:
+
 - catalog
 - stock
 - orders
@@ -226,7 +279,8 @@ RTW requires fewer workflows:
 
 This lets us ship **in weeks**, not months.
 
-#### **3.  Marketing Foundation**
+#### **3. Marketing Foundation**
+
 RTW gives us assets for visibility:
 
 - product photos
@@ -236,7 +290,9 @@ RTW gives us assets for visibility:
 This drives traffic and accelerates brand awareness.
 
 #### **4. Operational Discipline**
+
 RTW forces the atelier to adopt:
+
 - stock management
 - order tracking / delivery processes
 - product naming conventions
@@ -255,21 +311,27 @@ Solange Bernard aims to be the **digital operating system for couture ateliers**
 The strategy is intentional phased:
 
 #### **Phase 0 — RTW MVP**
+
 Goal: fast launch, immediate revenue, marketing foundation, visibility.
 
 #### **Phase 1 — Atelier Operations MVP**
+
 Goal: digitize core atelier workflows (measurements, production, QC).
 
 #### **Phase 2 — Client Experience Layer**
+
 Goal: elevate the customer journey (notifications, tracking, portal).
 
 #### **Phase 3 — Inventory & Fabric Management**
+
 Goal: supply chain discipline → less waste, more efficiency.
 
 #### **Phase 4 — Advanced SaaS (Powered by V∅ID Labs)**
+
 Goal: multi-tenant, scalable, data-driven platform.
 
 #### **Overall Vision**
+
 Become the **go-to SaaS for couture ateliers across Africa and beyond**, blending cultural craftsmanship with world-class technology.
 
 ---
@@ -279,41 +341,49 @@ Become the **go-to SaaS for couture ateliers across Africa and beyond**, blendin
 ### 3.1 High-Level Phases
 
 1. **Phase 0 — RTW MVP (Highest Priority)**
-   - Catalog, stock, orders, delivery  
+
+   - Catalog, stock, orders, delivery
    - Minimal but functional e-commerce front
 
 2. **Phase 1 — Atelier Operations MVP**
-   - Measurements, model validation  
+
+   - Measurements, model validation
    - Production workflow & QC
 
 3. **Phase 2 — Client Experience Layer**
+
    - Notifications, customer portal, order tracking
 
 4. **Phase 3 — Inventory & Fabric Management**
+
    - Fabrics, materials, tools, suppliers, low-stock alerts
 
 5. **Phase 4 — Advanced SaaS**
-   - Multi-tenant, analytics, AI, marketplace  
+   - Multi-tenant, analytics, AI, marketplace
    - → **Powered by V∅ID Labs**
 
 ### 3.2 Top Priorities (Business View)
 
 1. **PRIORITY #1 — Ready-to-Wear**
-   - Collection plan  
-   - Stock system  
-   - E-commerce  
-   - Size chart management  
-   - Photo catalog  
+
+   - Collection plan
+   - Stock system
+   - E-commerce
+   - Size chart management
+   - Photo catalog
    - Visibility strategy
 
 2. **PRIORITY #2 — Marketing & Visibility**
-   - Revamp Facebook page  
+
+   - Revamp Facebook page
    - Early teasers for RTW line
 
 3. **PRIORITY #3 — Information Flow**
+
    - Digitize: measurements, approvals, calendar, appointments, clients, inventory
 
 4. **PRIORITY #4 — Quality Control**
+
    - Checklist system (measurements, model conformity, stitching quality)
 
 5. **PRIORITY #5 — Productivity**
@@ -328,47 +398,53 @@ Become the **go-to SaaS for couture ateliers across Africa and beyond**, blendin
 ### 4.1 Must-Have Modules (Phase 0)
 
 1. **Product Catalog**
-   - Add RTW products  
-   - Fields: name, photos, description, sizes, price, stock per size  
+
+   - Add RTW products
+   - Fields: name, photos, description, sizes, price, stock per size
    - Core of the RTW experience
 
 2. **Stock Management**
-   - Track stock per size  
-   - Reduce stock when order placed  
-   - Block orders when stock = 0  
+
+   - Track stock per size
+   - Reduce stock when order placed
+   - Block orders when stock = 0
    - Manual stock adjustments
 
 3. **Order Placement (Customer-Facing)**
-   - Customer submits order  
-   - Required fields: name, phone, address, product + size, payment method (mobile money / cash-on-delivery)  
+
+   - Customer submits order
+   - Required fields: name, phone, address, product + size, payment method (mobile money / cash-on-delivery)
    - Order summary page
 
 4. **Order Management (Internal)**
-   - List all orders  
-   - Update status: `Pending → Confirmed → OutForDelivery → Delivered / Cancelled`  
+
+   - List all orders
+   - Update status: `Pending → Confirmed → OutForDelivery → Delivered / Cancelled`
    - Track payment status
 
 5. **Delivery Tracking (Simple)**
-   - Optional assignment of delivery person  
+
+   - Optional assignment of delivery person
    - Mark “Out for Delivery” / “Delivered”
 
 6. **Basic Authentication (Internal Only)**
+
    - Admin login to add products & manage orders
 
 7. **Simple Reporting**
-   - Units sold per product  
-   - Low stock alerts  
+   - Units sold per product
+   - Low stock alerts
    - Basic revenue overview
 
 ### 4.2 RTW Entities (Phase 0)
 
 Only **five** core entities:
 
-1. `Product`  
-2. `ProductVariant` / `StockItem` (per-size stock)  
-3. `Order`  
-4. `OrderItem`  
-5. `AdminUser`  
+1. `Product`
+2. `ProductVariant` / `StockItem` (per-size stock)
+3. `Order`
+4. `OrderItem`
+5. `AdminUser`
 
 ---
 
@@ -478,16 +554,16 @@ erDiagram
         datetime createdAt
         datetime updatedAt
     }
-````
+```
 
 </details>
 
 **How to read it:**
 
-* **Catalog**: `Product` → `ProductVariant` → `ProductImage`
-* **Inventory**: `StockItem` tracks quantity per `ProductVariant`
-* **Orders**: `Order` → many `OrderItem` + one `DeliveryInfo`
-* **Auth**: `AdminUser` creates products and manages orders
+- **Catalog**: `Product` → `ProductVariant` → `ProductImage`
+- **Inventory**: `StockItem` tracks quantity per `ProductVariant`
+- **Orders**: `Order` → many `OrderItem` + one `DeliveryInfo`
+- **Auth**: `AdminUser` creates products and manages orders
 
 ---
 
@@ -550,9 +626,9 @@ stateDiagram-v2
 
 This gives you **deterministic transitions** and clean APIs like:
 
-* `POST /orders/:id/confirm`
-* `POST /orders/:id/start-delivery`
-* `POST /orders/:id/cancel`
+- `POST /orders/:id/confirm`
+- `POST /orders/:id/start-delivery`
+- `POST /orders/:id/cancel`
 
 ---
 
@@ -576,8 +652,8 @@ flowchart TD
 
 </details>
 
-* Minimal friction, single product + single size per order (MVP).
-* Directly creates an `Order` in `Pending` state → feeds into the **order lifecycle**.
+- Minimal friction, single product + single size per order (MVP).
+- Directly creates an `Order` in `Pending` state → feeds into the **order lifecycle**.
 
 ---
 
@@ -641,12 +717,13 @@ flowchart LR
 
 **Key ideas:**
 
-* Each microservice owns its own database (**no shared DB**).
-* API Gateway / BFF:
+- Each microservice owns its own database (**no shared DB**).
+- API Gateway / BFF:
 
-  * handles routing, auth, and response shaping
-  * is the single entry point for web & admin clients
-* Later, domain events can supplement HTTP for more advanced flows.
+  - handles routing, auth, and response shaping
+  - is the single entry point for web & admin clients
+
+- Later, domain events can supplement HTTP for more advanced flows.
 
 ---
 
@@ -704,9 +781,9 @@ flowchart TD
 
 </details>
 
-* **Public Area** → Customer catalog + order flow
-* **Admin Area** → Product, stock, and order management
-* Shared infrastructure: **React Query**, theme, toasts, etc.
+- **Public Area** → Customer catalog + order flow
+- **Admin Area** → Product, stock, and order management
+- Shared infrastructure: **React Query**, theme, toasts, etc.
 
 ---
 
@@ -730,72 +807,72 @@ Each artefact is **versioned** and **linked to Jira** for traceability.
 
 ### Design & Productivity
 
-* Mermaid (diagrams)
-* DrawSQL (DB schema)
-* Figma (UX/UI)
-* VS Code
-* Git + GitHub
-* Agile + Scrum
-* Jira
+- Mermaid (diagrams)
+- DrawSQL (DB schema)
+- Figma (UX/UI)
+- VS Code
+- Git + GitHub
+- Agile + Scrum
+- Jira
 
 ### Core Backend Stack
 
-* TypeScript-first ecosystem
-* Node.js, Express
-* PostgreSQL + MongoDB
-* Prisma ORM
+- TypeScript-first ecosystem
+- Node.js, Express
+- PostgreSQL + MongoDB
+- Prisma ORM
 
 ### Frontend
 
-* React + Vite
-* PrimeReact
-* TailwindCSS
-* i18next
+- React + Vite
+- PrimeReact
+- TailwindCSS
+- i18next
 
 ### State & Data
 
-* Zustand
-* React Query
-* GraphQL (Apollo)
-* Redis
+- Zustand
+- React Query
+- GraphQL (Apollo)
+- Redis
 
 ### Mobile
 
-* Expo
-* React Native
+- Expo
+- React Native
 
 ### DevOps
 
-* pnpm (Monorepo)
-* Docker
-* GitHub Actions
-* Husky + lint-staged
-* Commitlint
-* validate-branch-name
+- pnpm (Monorepo)
+- Docker
+- GitHub Actions
+- Husky + lint-staged
+- Commitlint
+- validate-branch-name
 
 ### Testing
 
-* Vitest
-* React Testing Library
-* Supertest
-* Postman
-* Playwright
+- Vitest
+- React Testing Library
+- Supertest
+- Postman
+- Playwright
 
 ### Infra & Delivery
 
-* AWS (EC2, S3, RDS)
-* Cloudflare
-* Vercel
-* Render
-* AlwaysData
+- AWS (EC2, S3, RDS)
+- Cloudflare
+- Vercel
+- Render
+- AlwaysData
 
 ### Other
 
-* Stripe
-* Socket.io
-* Swagger
-* Sentry
-* Electron
+- Stripe
+- Socket.io
+- Swagger
+- Sentry
+- Electron
 
 ---
 
@@ -803,51 +880,51 @@ Each artefact is **versioned** and **linked to Jira** for traceability.
 
 ### Ways of Working
 
-* Style guide & design system discipline
-* UX/UI inspirations (Awwwards, Dribbble…)
-* Scrum with Jira
-* Clean Architecture
-* Domain-Driven Design
-* Microservices (API Gateway, service discovery, DB per service)
-* TDD as default
-* CI/CD pipelines
-* UML & Mermaid for modelling
-* JSDoc for documentation
-* A11y & i18n baked in
-* Security & privacy from day 1
-* Performance optimization
-* Monitoring & logging
-* SEO + PWA + offline sync
-* Responsive + mobile-first
-* Scalability planning
+- Style guide & design system discipline
+- UX/UI inspirations (Awwwards, Dribbble…)
+- Scrum with Jira
+- Clean Architecture
+- Domain-Driven Design
+- Microservices (API Gateway, service discovery, DB per service)
+- TDD as default
+- CI/CD pipelines
+- UML & Mermaid for modelling
+- JSDoc for documentation
+- A11y & i18n baked in
+- Security & privacy from day 1
+- Performance optimization
+- Monitoring & logging
+- SEO + PWA + offline sync
+- Responsive + mobile-first
+- Scalability planning
 
 ### Concrete Success Metrics (Examples)
 
-* **Operations**
+- **Operations**
 
-  * 90% of production tasks tracked in real-time
-  * 100% of measurements stored digitally
-  * Missed deadlines & rework ↓ 40%
-  * Fabric waste ↓ 25%
+  - 90% of production tasks tracked in real-time
+  - 100% of measurements stored digitally
+  - Missed deadlines & rework ↓ 40%
+  - Fabric waste ↓ 25%
 
-* **Business**
+- **Business**
 
-  * Atelier output ↑ 30% with same staff
-  * Real sales happening within 2–4 weeks after RTW MVP deployment
+  - Atelier output ↑ 30% with same staff
+  - Real sales happening within 2–4 weeks after RTW MVP deployment
 
-* **UX**
+- **UX**
 
-  * NPS ≥ 9/10
-  * Onboarding new staff in < 1 day
-  * No paper backups after 3 months
+  - NPS ≥ 9/10
+  - Onboarding new staff in < 1 day
+  - No paper backups after 3 months
 
-* **Technical**
+- **Technical**
 
-  * 99.9% uptime
-  * Multi-tenant support for 100+ ateliers & 1000+ clients each
-  * 80%+ code coverage
-  * Fully automated CI/CD
-  * Developer onboarding < 1 week
+  - 99.9% uptime
+  - Multi-tenant support for 100+ ateliers & 1000+ clients each
+  - 80%+ code coverage
+  - Fully automated CI/CD
+  - Developer onboarding < 1 week
 
 ---
 
@@ -855,30 +932,33 @@ Each artefact is **versioned** and **linked to Jira** for traceability.
 
 This single README gives the **big picture**:
 
-* **Domain & reality** → Atelier workflow, roles, problems
-* **Strategy** → RTW-first, phased roadmap
-* **Data** → Canonical ERD
-* **Behaviour** → Order lifecycle & stock rules
-* **Experience** → Customer flow & admin workflows
-* **Architecture** → Microservices + gateway + frontend structure
-* **Execution** → Tech stack, design directory, engineering practices, success metrics
+- **Domain & reality** → Atelier workflow, roles, problems
+- **Strategy** → RTW-first, phased roadmap
+- **Data** → Canonical ERD
+- **Behaviour** → Order lifecycle & stock rules
+- **Experience** → Customer flow & admin workflows
+- **Architecture** → Microservices + gateway + frontend structure
+- **Execution** → Tech stack, design directory, engineering practices, success metrics
 
 Anyone joining the project (business or technical) should be able to read this file and **understand how the RTW platform and the broader atelier system fit together** from A to Z.
 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/Ange230700/s_b_m_c.git
 cd s_b_m_c
 ```
 
 ### 2. Install dependencies
+
 ```bash
 pnpm install
 ```
 
 ### 3. Set up environment variables
+
 Each microservice contains a `.env.example` file. Duplicate them:
 
 ```bash
@@ -888,11 +968,13 @@ cp services/*/.env.example services/*/.env
 (Later, we'll add a script to automate this.)
 
 ### 4. Run the entire platform in dev mode
+
 ```bash
 pnpm dev
 ```
 
 ### 5. Run tests
+
 ```bash
 pnpm test
 ```
@@ -936,26 +1018,30 @@ s_b_m_c/
 ## 🤝 Contributing
 
 ### Branching Strategy
+
 - Use feature branches:
-   - `feature/your-feature-name`
-   - `fix/bug-description`
-   - `chore/task-description`
-   - `docs/update-description`
+  - `feature/your-feature-name`
+  - `fix/bug-description`
+  - `chore/task-description`
+  - `docs/update-description`
 
 ### Commit Messages
+
 - Follow Conventional Commits:
-   - `feat: add product variant CRUD`
-   - `fix: correct stock decrement logic`
-   - `refactor: clean order service handlers`
-   - `docs: update ERD for variant images`
+  - `feat: add product variant CRUD`
+  - `fix: correct stock decrement logic`
+  - `refactor: clean order service handlers`
+  - `docs: update ERD for variant images`
 
 ### Pull Requests Requirements
+
 - Code must pass all tests (`pnpm test`)
 - Include diagrams (Mermaid) for domain-impacting changes
 - Update documentation if behaviour or data model changes
 - Use clear titles & descriptions
 
 ### Testing Standards
+
 - **Vitest** for unit tests
 - **React Testing Library** for frontend components
 - **Supertest** for API endpoints
@@ -968,32 +1054,36 @@ s_b_m_c/
 ## 🗺️ Roadmap (High-Level Milestones)
 
 - **RTW MVP Zero**
-   - Product catalog
-   - Stock management
-   - Order placement & lifecycle
-   - Simple delivery
-   - Basic admin auth
+
+  - Product catalog
+  - Stock management
+  - Order placement & lifecycle
+  - Simple delivery
+  - Basic admin auth
 
 - **Atelier Operations MVP**
-   - Measurement tracking
-   - Model validation
-   - Production pipeline (cutting → sewing → QC)
+
+  - Measurement tracking
+  - Model validation
+  - Production pipeline (cutting → sewing → QC)
 
 - **Client Experience Layer**
-   - Customer portal
-   - Notifications
-   - Order tracking (client-facing)
+
+  - Customer portal
+  - Notifications
+  - Order tracking (client-facing)
 
 - **Inventory & Fabric Management**
-   - Fabric & materials tracking
-   - Stock alerts
-   - Supplier tracking
+
+  - Fabric & materials tracking
+  - Stock alerts
+  - Supplier tracking
 
 - **Advanced SaaS Layer (Powered by V∅ID Labs)**
-   - Multi-tenant architecture
-   - Analytics dashboard
-   - AI-powered recommendations
-   - Marketplace integration
+  - Multi-tenant architecture
+  - Analytics dashboard
+  - AI-powered recommendations
+  - Marketplace integration
 
 ---
 
@@ -1006,6 +1096,7 @@ This project will follow **Semantic Versioning (SemVer)**:
 - **PATCH**: Bug fixes / minor improvements
 
 Example:
+
 ```
 v1.2.4
 └─ 1 → major
