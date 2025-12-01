@@ -1357,3 +1357,63 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## 🔮 What’s Next (Near-Term Roadmap)
+
+This section outlines the **immediate next steps** planned for development:
+
+- 🔧 Scaffold the four RTW backend services (catalog, orders, inventory, auth)
+- 🔌 Wire up the API Gateway routing → service endpoints
+- 🗃️ Implement the canonical ERD via Prisma models
+- 🛒 Implement the RTW order flow end-to-end (form → stock → order)
+- 🚦 Add the full order state machine to the Orders Service
+- 🧪 Begin TDD foundation for DTO → Domain mapping
+- 🖼️ Replace mockup placeholders with actual Figma exports
+- 🛠️ Add seed scripts for demo data (products, variants, stock)
+- 📊 Add basic admin dashboards (orders, products, stock levels)
+
+These represent Week 1–4 deliverables of Phase 0 execution.
+
+---
+
+## 📝 Changelog (High-Level)
+
+> This changelog tracks major documentation and platform evolution.
+> For code-level changes, use the repository’s Releases or PR history.
+
+**v0.4.0 — README Extended Architecture Pass**
+- Added installation diagram, runtime architecture, and request-flow sequence diagrams
+
+**v0.3.0 — Full Project Structure & API Quickstart**
+- Added API Quickstart section and expanded monorepo overview
+
+**v0.2.0 — Strategic Rationale & Phasing**
+- Added personas, RTW-first strategy justification, and strategic rationale
+
+**v0.1.0 — Initial README (Foundations)**
+- Original business logic, ERD, lifecycle, architecture, stack, success criteria
+
+## 📅 Release Cadence
+
+The project follows a predictable release philosophy:
+
+The project follows a predictable release philosophy:
+
+- **Weekly Dev Releases (v0.x.x)**  
+  - New features, architecture improvements, internal tooling  
+  - Breaking changes allowed  
+
+- **Bi-weekly Milestone Tags (v0.N.0)**  
+  - Major README or spec updates  
+  - Larger shifts in structure or architecture  
+
+- **Production Releases (v1.x.x and above)**  
+  - Aligned with Phase milestones:  
+    - **v1.0** → RTW MVP Zero completed and deployed  
+    - **v2.0** → Atelier Operations MVP  
+    - **v3.0** → Inventory & Fabric Management  
+    - **v4.0** → Client Experience Platform  
+    - **v5.0** → Multi-tenant SaaS powered by V∅ID Labs  
+
+> The cadence keeps momentum high while ensuring architectural clarity at every phase.
+
