@@ -146,6 +146,132 @@ These real roles shape the **domain model, flows, and UI** of the platform.
 5. **Create a premium digital client experience**  
 6. **Arm the atelier with data** (production, finances, workload, sales)
 
+### 2.3 Personas (Who We’re Building For)
+
+#### **Persona A — The Atelier Manager (Primary User)**
+
+**Name:** Solange
+**Role:** Owner / Manager / Reception Lead
+**Goals:**
+- Keep the atelier organized
+- Track client files, measurements, and deadlines
+- Minimize errors and rework
+- Improve client satisfaction
+- Keep the team productive and aligned
+
+**Pain Points:**
+- Everything is on paper
+- Information gets lost
+- Staff forget deadlines
+- Customers complain about delays
+- Difficult to track sales, performance, inventory
+
+**How the product helps:**
+- Centralized dashboard for all operations
+- Automatic reminders & workflow tracking
+- Real-time visibility on production
+- Digitized measurements, models, and appointments
+
+#### **Persona B — The Seamstress / Tailor**
+
+**Role:** Produces garments (cutting, sewing, finishing)
+**Goals:**
+- Receive clear tasks
+- Understand model details & measurements
+- Avoid back-and-forth with the receptionist
+
+**Pain Points:**
+- Missing measurements
+- Wrong model references
+- Not knowing task priority
+
+**How the product helps:**
+- Clear production pipeline
+- Access to measurements & model details
+- QC feedback loop to improve quality
+
+#### **Persona C — The Client (RTW and Sur-Mesure)**
+**Role:** Customer buying RTW or custom clothes
+**Goals:**
+- Buy beautiful garments
+- Get reliable delivery
+- Have a professional experience
+
+**Pain Points:**
+- No online catalog
+- Hard to know availability
+- No clear appointment communication
+
+**How the product helps:**
+- Easy RTW ordering
+- Clean product catalog
+- Transparent delivery process
+
+### 2.4 Why RTW First? (Strategic Justification)
+
+Before building the full atelier OS, we prioritize **RTW MVP Zero**.
+Here's why this is the highest-value starting point:
+
+#### **1. Immediate Revenue**
+
+RTW products generate fast cash flow — critical for an atelier needing stability.
+Sur-mesure is slow, complex, and less scalable.
+
+#### **2. Smaller Scope → Faster Launch**
+RTW requires fewer workflows:
+- catalog
+- stock
+- orders
+- delivery
+
+This lets us ship **in weeks**, not months.
+
+#### **3.  Marketing Foundation**
+RTW gives us assets for visibility:
+
+- product photos
+- social media content
+- early customer engagement
+
+This drives traffic and accelerates brand awareness.
+
+#### **4. Operational Discipline**
+RTW forces the atelier to adopt:
+- stock management
+- order tracking / delivery processes
+- product naming conventions
+
+These are foundational skills that transfer to sur-mesure later.
+
+#### **5. Build Trust with Real Customers**
+
+We prove the system works by letting real customers place orders.
+This is essential for early product-market validation.
+
+### 2.5 Strategic Rationale (Long-Term Vision)
+
+Solange Bernard aims to be the **digital operating system for couture ateliers**.
+
+The strategy is intentional phased:
+
+#### **Phase 0 — RTW MVP**
+Goal: fast launch, immediate revenue, marketing foundation, visibility.
+
+#### **Phase 1 — Atelier Operations MVP**
+Goal: digitize core atelier workflows (measurements, production, QC).
+
+#### **Phase 2 — Client Experience Layer**
+Goal: elevate the customer journey (notifications, tracking, portal).
+
+#### **Phase 3 — Inventory & Fabric Management**
+Goal: supply chain discipline → less waste, more efficiency.
+
+#### **Phase 4 — Advanced SaaS (Powered by V∅ID Labs)**
+Goal: multi-tenant, scalable, data-driven platform.
+
+#### **Overall Vision**
+Become the **go-to SaaS for couture ateliers across Africa and beyond**, blending cultural craftsmanship with world-class technology.
+
 ---
 
 ## 3. Strategy & Phasing (RTW-First)
