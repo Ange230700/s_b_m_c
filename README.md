@@ -655,6 +655,35 @@ flowchart TD
 - Minimal friction, single product + single size per order (MVP).
 - Directly creates an `Order` in `Pending` state → feeds into the **order lifecycle**.
 
+### 7.1 Request-Flow Sequence Diagram (RTW Order)
+
+<details>
+<summary>🔁 Click to expand sequence diagram</summary>
+
+```mermaid
+sequenceDiagram
+   participant C as Client (Browser)
+   participant W as Public Web App
+   participant G as API Gateway / BFF
+   participant CAT as Catalog Service
+   participant INV as Inventory Service
+   participant ORD as Orders Service
+
+   C->>W: Select product + size<br/>Fill order form
+   W->>G: POST /orders<br/>{productId, variantId, customerInfo}
+   G->>CAT: GET /products/:id (validate product)
+   CAT-->>G: 200 OK (product data)
+   G->>INV: GET /stock/:variantId (check stock)
+   INV-->>G: 200 OK (stock available)
+   G->>ORD: POST /orders<br/>{productId, variantId, customerInfo}
+   ORD-->>G: 201 Created (order data)
+   G-->>W: 201 Created (order summary)
+   W-->>C: Show order confirmation
+````
+</details>
+
+
+
 ---
 
 ## 8. System Architecture (Microservices + Gateway)
@@ -724,6 +753,58 @@ flowchart LR
   - is the single entry point for web & admin clients
 
 - Later, domain events can supplement HTTP for more advanced flows.
+
+### 8.1 Runtime Architecture (Deployment View)
+
+<details>
+<summary>🌐 Click to expand runtime deployment view</summary>
+
+```mermaid
+flowchart LR
+   subgraph Clients
+      C1[Public Web (Vercel)]
+      C2[Admin Dashboard (Vercel)]
+   end
+
+   subgraph Edge
+      CDN[Cloudflare CDN]
+   end
+
+   subgraph Backend
+      GW["API Gateway / BFF"]
+      CAT["Catalog Service"]
+      ORD["Orders Service"]
+      INV["Inventory Service"]
+      AUTH["Auth Service"]
+   end
+
+   subgraph Data["Data Layer"]
+      PG_CAT[(PostgreSQL - Catalog)]
+      PG_ORD[(PostgreSQL - Orders)]
+      PG_INV[(PostgreSQL - Inventory)]
+      PG_AUTH[(PostgreSQL - Auth)]
+      CACHE[(Redis - cache/session)]
+      S3[(AWS S3 for Assets)]
+   end
+
+   C1 --> CDN --> GW
+   C2 --> CDN --> GW
+
+   GW --> CAT
+   GW --> ORD
+   GW --> INV
+   GW --> AUTH
+
+   CAT --> PG_CAT
+   ORD --> PG_ORD
+   INV --> PG_INV
+   AUTH --> PG_AUTH
+
+   GW --> CACHE
+```
+</details>
+
+
 
 ---
 
@@ -978,6 +1059,22 @@ pnpm dev
 ```bash
 pnpm test
 ```
+
+### 6. Installation Diagram (Developer Setup Flow)
+
+<details>
+<summary>🛠️ Click to expand installation diagram</summary>
+
+```mermaid
+flowchart TD
+   A[Developer machine] --> B[Clone repo<br/>git clone ...]
+   B --> C[Install pnpm<br/>pnpm install]
+   C --> D[Set up .env files<br/>cp .env.example .env]
+   D --> E[Start databases / infra<br/>e.g. Docker compose]
+   E --> F[Run in dev mode<br/>pnpm dev]
+   F --> G[Run tests<br/>pnpm test]
+```
+</details>
 
 ---
 
