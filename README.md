@@ -68,6 +68,10 @@ It centralizes and elevates every operational, creative, and commercial workflow
 - 🧰 [11. Technology Stack](#11-technology-stack)
 - 📏 [12. Engineering Principles & Success Criteria](#12-engineering-principles--success-criteria)
 - 🧩 [13. Mental Model Summary](#13-mental-model-summary)
+- 🚀 [Getting Started](#-getting-started)
+- 📦 [Repository Structure (Monorepo Overview)](#-repository-structure-monorepo-overview)
+- 🤝 [Contributing](#-contributing)
+- 🔌 [API Quickstart](#-api-quickstart-rtw-mvp)
 
 ---
 
@@ -1109,6 +1113,82 @@ s_b_m_c/
 ```
 
 > This structure reflects a clean microservices + apps monorepo using **pnpm**, designed for scale, modularity, and team onboarding.
+
+---
+
+## 🔌 API Quickstart (RTW MVP)
+
+> Minimal HTTP surface for the **RTW MVP Zero**.
+> URLs and ports are examples; adapt to your actual environment.
+
+### Base URL (Dev)
+
+- `http://localhost:4000` → API Gateway / BFF (`rtw-api-gateway`)
+
+All client apps (public RTW web, admin dashboard) talk to this gateway.
+
+### 1. Catalog Service
+
+- `GET /products`
+   List **published** RTW products.
+
+- `GET /products/:id`
+   Get details for a specific product.
+
+- `GET /products/:id/variants`
+   Get variants (sizes/colors) + stock info.
+
+**Example: list products**
+
+```bash
+curl http://localhost:4000/products
+```
+
+### 2. Order Service
+
+- `POST /orders`
+   Create a new RTW order in **Pending** status.
+
+**Example: create order**
+
+```bash
+curl -X POST http://localhost:4000/orders \
+  -H "Content-Type: application/json" \
+  -d '{
+      "productId": "prod_123",
+      "variantId": "var_456",
+      "customerName": "Jane Doe",
+      "customerPhone": "+2250700000000",
+      "customerAddress": "Cocody, Abidjan",
+      "paymentMethod": "cash_on_delivery"
+   }'
+```
+
+If stock is available, this:
+- reserves stock (via Inventory Service)
+- creates the order in `Pending` state
+
+### 3. Order Lifecycle Actions
+
+These mirror the **state machine** defined in the README:
+
+- `POST /orders/:id/confirm` → `Pending → Confirmed`
+- `POST /orders/:id/start-delivery` → `Confirmed → OutForDelivery`
+- `POST /orders/:id/mark-delivered` → `OutForDelivery → Delivered`
+- `POST /orders/:id/cancel` → `* → Cancelled` (with stock policy)
+
+> The backend enforces valid state transitions; invalid transitions return an error (e.g. 409 Conflict).
+
+### 4. Admin / Backoffice Endpoints (Phase 0)
+
+Used by the **admin dashboard**, not public clients:
+
+- `POST /admin/products` → Create new RTW product
+- `PUT /admin/products/:id` → Update RTW product
+- `POST /admin/products/:id/images` → upload / attach images
+- `POST /admin/stock/adjust` → manual stock correction
+
+Authentication strategy (e.g. JWT, sessions) is handled at the **gateway level**, then propagated to services.
 
 ---
 
