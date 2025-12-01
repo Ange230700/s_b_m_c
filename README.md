@@ -1011,6 +1011,35 @@ Each artefact is **versioned** and **linked to Jira** for traceability.
   - Fully automated CI/CD
   - Developer onboarding < 1 week
 
+### Performance, Security & Scalability Guarantees (Targets)
+
+These are **target expectations** that guide architecture and implementation decisions from Phase 0 onward:
+
+- **Performance**
+
+   - p95 API response time < 300ms for core endpoints
+   (e.g. `GET /products`, `GET /products/:id`, `POST /orders`)
+   - Initial page load time < 2s on mid-range mobile devices over 3G/4G
+   - Images served via CDN with proper optimization, lazy loading, caching, compression, and responsive sizes
+
+- **Security**
+   - HTTPS enforced in all production environments (no plain HTTP)
+   - Secrets never committed to the repo (env vars / secret manager only)
+   - Basic RBAC for admin users (role-based capabilities)
+   - Input validation + output encoding to reduce OWASP Top 10 risks
+   - Regular dependency audits and updates to patch vulnerabilities
+   - Daily automated backups of all databases with point-in-time recovery
+
+- **Scalability & Reliability**
+   - API Gateway and stateless services can scale horizontally
+   - Databases indexed for primary access patterns
+   (e.g. orders by date/status, stock by variant, products by slug)
+   - Target uptime ≥ 99.9% once live with real customers
+   - Daily backups at minimum, with clear restore procedures
+   - Basic observability from early stages:
+      - Request rate, error rate, latency
+      - Stock anomalies (negative stock, repeated failed reservations)
+
 ---
 
 ## 13. Mental Model Summary
