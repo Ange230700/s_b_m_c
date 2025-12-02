@@ -12,7 +12,6 @@ npm-debug.log*
 # TypeScript build outputs
 dist/
 build/
-out/
 tsconfig.tsbuildinfo
 
 # caches
@@ -29,8 +28,3 @@ tmp/
 # Test coverage
 coverage/
 lcov-report/
-
-# Build artifacts for monorepo packages
-packages/*/dist/
-packages/*/build/
-packages/*/lib/
