@@ -312,7 +312,7 @@ This is essential for early product-market validation.
 
 Solange Bernard aims to be the **digital operating system for couture ateliers**.
 
-The strategy is intentional phased:
+The strategy is intentionally phased:
 
 #### **Phase 0 — RTW MVP**
 
@@ -343,6 +343,9 @@ Become the **go-to SaaS for couture ateliers across Africa and beyond**, blendin
 ## 3. Strategy & Phasing (RTW-First)
 
 ### 3.1 High-Level Phases
+
+> 💡 **This repository currently focuses on Phase 0 — RTW MVP.**
+> All architecture and APIs in this README are scoped to the RTW line first.
 
 1. **Phase 0 — RTW MVP (Highest Priority)**
 
@@ -683,7 +686,7 @@ sequenceDiagram
    ORD-->>G: 201 Created (order data)
    G-->>W: 201 Created (order summary)
    W-->>C: Show order confirmation
-````
+```
 </details>
 
 
@@ -1016,9 +1019,8 @@ Each artefact is **versioned** and **linked to Jira** for traceability.
 These are **target expectations** that guide architecture and implementation decisions from Phase 0 onward:
 
 - **Performance**
-
    - p95 API response time < 300ms for core endpoints
-   (e.g. `GET /products`, `GET /products/:id`, `POST /orders`)
+      (e.g. `GET /products`, `GET /products/:id`, `POST /orders`)
    - Initial page load time < 2s on mid-range mobile devices over 3G/4G
    - Images served via CDN with proper optimization, lazy loading, caching, compression, and responsive sizes
 
@@ -1397,8 +1399,6 @@ These represent Week 1–4 deliverables of Phase 0 execution.
 
 The project follows a predictable release philosophy:
 
-The project follows a predictable release philosophy:
-
 - **Weekly Dev Releases (v0.x.x)**  
   - New features, architecture improvements, internal tooling  
   - Breaking changes allowed  
@@ -1416,4 +1416,3 @@ The project follows a predictable release philosophy:
     - **v5.0** → Multi-tenant SaaS powered by V∅ID Labs  
 
 > The cadence keeps momentum high while ensuring architectural clarity at every phase.
-
