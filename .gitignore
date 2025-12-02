@@ -28,3 +28,6 @@ tmp/
 # Test coverage
 coverage/
 lcov-report/
+
+# Lock files
+pnpm-lock.yaml
