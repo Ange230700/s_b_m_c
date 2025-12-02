@@ -1,7 +1,36 @@
 # .gitignore
 
-.vscode/
+# Node / pnpm
 node_modules/
-dist/
+npm-debug.log*
+
+# Environment variables
 .env
-.DS_Store
+.env.*
+!.env.example
+
+# TypeScript build outputs
+dist/
+build/
+out/
+tsconfig.tsbuildinfo
+
+# caches
+.eslintcache
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# IDE & editor folders
+.vscode/
+
+# Test coverage
+coverage/
+lcov-report/
+
+# Build artifacts for monorepo packages
+packages/*/dist/
+packages/*/build/
+packages/*/lib/
