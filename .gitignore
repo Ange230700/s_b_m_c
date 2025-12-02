@@ -31,3 +31,5 @@ lcov-report/
 
 # Lock files
 pnpm-lock.yaml
+
+*.ini
